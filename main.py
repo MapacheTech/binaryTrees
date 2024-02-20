@@ -1,12 +1,29 @@
 from lib import *
 
-nodo1 = nodo(2)
+inOrderArr = []
 
-nodo2 = nodo(10)
 
-nodo3 = nodo(5)
+nodo1 = nodo(1)
 
-nodo1.izq = nodo3
-nodo1.der = nodo2
+nodo2 = nodo(2)
 
-print(nodo1)
+nodo3 = nodo(3)
+
+nodo4 = nodo(4)
+
+nodo5 = nodo(5)
+
+nodo6 = nodo(6)
+
+nodo7 = nodo(7)
+
+linkHijo(nodo1, nodo2, nodo3)
+linkHijo(nodo2, nodo4, nodo5)
+linkHijo(nodo3, nodo6, nodo7)
+
+
+
+LVR(nodo1, inOrderArr)
+
+print(inOrderArr)
+
