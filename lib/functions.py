@@ -13,4 +13,48 @@ def LVR(Nodo, inOrderArr):
         LVR(nodoPadre.der, inOrderArr)
     else:
         pass
+    
     return inOrderArr
+
+def VLR(Nodo, preOrderArr):
+    if Nodo is not None:
+        nodoPadre = Nodo
+        preOrderArr.append(nodoPadre.valor)
+        LVR(nodoPadre.izq, preOrderArr)        
+        LVR(nodoPadre.der, preOrderArr)
+    else:
+        pass
+    
+    return preOrderArr
+
+def LRV(Nodo, postOrderArr):
+    if Nodo is not None:
+        nodoPadre = Nodo
+        LVR(nodoPadre.izq, postOrderArr)        
+        LVR(nodoPadre.der, postOrderArr)
+        postOrderArr.append(nodoPadre.valor)        
+    else:
+        pass
+    
+    return postOrderArr
+
+def nodosOrdenados(nodoPadre, newNodo):
+    if newNodo.valor < nodoPadre.valor:
+        if nodoPadre.izq is None:
+            nodoPadre.izq = newNodo
+        else:
+            nodosOrdenados(nodoPadre.izq, newNodo)
+    if newNodo.valor > nodoPadre.valor:
+        if nodoPadre.der is None:
+            nodoPadre.der = newNodo
+        else:
+            nodosOrdenados(nodoPadre.der, newNodo)
+    pass
+
+def printArbol(Nodo):
+    if Nodo is not None:
+        nodoPadre = Nodo
+        print(nodoPadre.getArbol())
+        printArbol(nodoPadre.izq,)        
+        printArbol(nodoPadre.der)
+    return 0
