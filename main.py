@@ -44,7 +44,7 @@ print(postOrderArr)
 
 print("-------------------------------------------------------------------")
 
-arrNodos = [16,5,7,12,9,20,18,3,10,14]
+arrNodos = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
 nodoRaiz = None
 
 for i in range(0,len(arrNodos),1):
