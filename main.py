@@ -56,6 +56,7 @@ for i in range(0,len(arrNodos),1):
     pass
 
 
+
 """nodoRaiz = nodo(16)
 nodo9 = nodo(5)
 nodo10 = nodo(7)
@@ -109,3 +110,24 @@ print(inOrderNR)
 LRV(nodoRaiz, postOrderNR)
 print("Post Order: ")
 print(postOrderNR)
+
+
+print("-----------------------------------------------------------------------")
+
+nodoRaiz =nodo(arraynum[0])
+cola = []
+cola.append(nodoRaiz)
+def agregaNodos(currentNodo,):
+    
+    currentNodo = cola.pop()
+    
+    if currentNodo.izq is None:
+        currentNodo.izq = nodo(arraynum[i])
+        return 0
+    if currentNodo.der is None:
+        currentNodo.der = nodo(arraynum[i])
+        return 0
+    cola.append(currentNodo.izq)
+    cola.append(currentNodo.der)
+    
+    agregaNodos(currentNodo,)
