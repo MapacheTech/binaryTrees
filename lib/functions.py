@@ -1,3 +1,5 @@
+from .classes import *
+
 def linkHijo(nodoPadre, nodoHijoIz=None,nodoHijoDer=None):
     if nodoHijoIz is not None:
         nodoPadre.izq = nodoHijoIz
@@ -57,4 +59,23 @@ def printArbol(Nodo):
         print(nodoPadre.getArbol())
         printArbol(nodoPadre.izq,)        
         printArbol(nodoPadre.der)
+    return 0
+
+def agregaNodos(currentNodo, nuevoNumero):
+    cola = []
+    cola.append(currentNodo)
+    
+    while cola:
+          
+        currentNodo = cola.pop(0)
+        
+        if currentNodo.izq is None:
+            currentNodo.izq = nodo(nuevoNumero)
+            return 0
+        if currentNodo.der is None:
+            currentNodo.der = nodo(nuevoNumero)
+            return 0
+        cola.append(currentNodo.izq)
+        cola.append(currentNodo.der)
+        
     return 0
