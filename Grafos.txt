@@ -20,3 +20,12 @@ Matriz de adyacencia:
 [0,0,0,0,1,1,0,0]
 
 
+Caminos cortos (Dijstra)
+Nodo Origen B
+B-A 3
+B-D 1
+B-G 5
+B-D-C 3 
+B-D-E 5
+B-D-F 3
+B-D-E-H 6
